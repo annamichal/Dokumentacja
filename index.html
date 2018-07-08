@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	<!-- Responsive meta tag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!--Odwołnanie do css-->
+	<link rel="stylesheet" href="css/strona.css">
+
+	<title>Dokumentacja</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- navbar -->
+			<nav id="nav-bar" class="col-12 col-sm-4 col-md-3 col-lg-2">
+				<header>
+					<h1>Bootstrap 4</h1>
+				</header>
+				<div class="navs">
+					<a class="nav-link" href="#Hello_World">Hello World</a>
+					<a class="nav-link" href="#Wprowadzenie">Wprowadzenie</a>
+					<a class="nav-link" href="#Kontener">Kontener</a>
+					<a class="nav-link" href="#Siatka_wprowadzenie">Siatka-wprowadzenie</a>
+					<a class="nav-link" href="#Siatka">Siatka</a>
+					<a class="nav-link" href="#Równa_szerokość_kolumn">Równa szerokość kolumn</a>
+					<a class="nav-link" href="#Definiowanie_szerokości_jednej_kolumny">Definiowanie szerokości jednej kolumny</a>
+					<a class="nav-link" href="#Szerokość_kolumny_zależna_od_treści">Szerokość kolumny zależna od treści</a>
+					<a class="nav-link" href="#Wiele_równych_rzędów">Wiele równych rzędów</a>
+					<a class="nav-link" href="#Responsywność">Responsywność</a>
+					<a class="nav-link" href="#Wyrównanie_rzędu_w_pionie">Wyrównanie rzędu w pionie</a>
+					<a class="nav-link" href="#Wyrównanie_kolumny_w_pionie">Wyrównanie kolumny w pionie</a>
+					<a class="nav-link" href="#Wyrównanie_w_poziomie">Wyrównanie w poziomie</a>
+					<a class="nav-link" href="#Wyrównanie_w_pionie_i_w_poziomie">Wyrównanie w pionie i w poziomie</a>
+				</div>
+			</nav>
+			<!-- main -->
+			<main id="main-doc" class="col-12 col-sm-8 col-md-9 col-lg-10">
+				<!-- Hello World -->
+				<section id="Hello_World" class="main-section">
+					<h2>Hello World</h2>
+					<p>Bootstrap jest zbiorem gotowych elementów HTML/CSS oraz skryptów JS, który umożliwia tworzenie responsywnych stron internetowych. Dzięki niemu możecie stworzyć stronę, która będzie się „dopasowywać” do ekranów smartfonów, tabletów i komputerów. Dzięki siatce (grid) z łatwością podzielimy stronę na kilka części, które mogą zachowywać się inaczej w zależności od rozdzielczości. Mnogość gotowych elementów również znacząco przyspiesza tworzenie nowych witryn. Nie musimy na przykład stylować przycisku od podstaw, gdzie stworzenie takiego najprostszego to minimum kilka linijek CSSa a później jeszcze musimy zadbać o zmianę jego koloru po najechaniu kursorem oraz ostylować link, który pod niego podepniemy. Wykorzystujemy gotową klasę <code>.btn</code> i nasz przycisk jest gotowy. Oczywiście takich elementów jest dużo więcej, mogą one modyfikować typografię, obrazy, tabele, tworzyć paski nawigacji czy okienka pop-up.</p>
+				</section>
+				<!-- Introduction -->
+				<section id="Wprowadzenie" class="main-section">
+					<h4>Wprowadzenie</h4>
+					<p>Jak już wiecie Bootstrap jest zbiorem snippetów HTML, klas CSS oraz skryptów JS dzięki którym można dużo szybciej stworzyć responsywną stronę internetową. Posiada on siatkę, dzięki której możemy stworzyć szkielet naszej witryny a także wiele gotowych elementów.</p>
+					<p>W tym wpisie dowiemy się jak zacząć naszą przygodę, skąd wziąć pliki Bootsrtapa oraz jak zaimportować je do naszego pliku.</p>
+					<p>Jak wiemy, dokument HTML składa się z sekcji <code>head</code> w której umieszczamy metatagi, importujemy pliki CSS itp oraz sekcji <code>body</code>, która jest „ciałem” dokument, więc znajduje się w niej nasz kod. Podstawowa zawartość naszego pliku powinna wyglądać następująco:</p>
+					<div class="container code">
+						<code>
+									&lt;!doctype html&gt;<br>
+									&lt;html lang="pl_PL"&gt;<br>
+									&lt;head&gt;<br>
+									&lt;ttitle&gt;Hello, world!&lt;title&gt;<br>
+									&lt;!-- Required meta tags --&gt;<br>
+									&lt;meta charset="utf-8"&gt;<br>
+									&lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;<br><br>
+									&lt;!-- Bootstrap CSS --&gt;<br>
+									&lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"&gt;<br>
+									&lt;/head&gt;<br><br>
+									&lt;body&gt;<br>
+									&lt;h1&gt;Hello, world!&lt;/h1&gt;<br><br>
+									&lt;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&gt;&lt;/script&gt;<br><br>
+									&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"&gt;&lt;/script&gt;<br><br>
+									&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"&gt;&lt;/script&gt;<br><br>
+									&lt;/body&gt;<br>
+									&lt;/html&gt;
+								</code>
+					</div>
+					<p>Jak widać w powyższym kodzie, w sekcji head dokumentu importujemy sobie pliki CSS Bootstrapa korzystając z serwerów CDN. Oznacza to tyle, że nie musimy mieć tych plików u siebie na serwerze a zostają nam one dostarczone przez usługę CDN (Content Delivery Network). Pamiętajcie by zawsze sprawdzać jaka jest aktualna wersja i zamieszczać ją w swoich projektach.</p>
+					<p>Przechodzimy teraz do sekcji <code>body</code>. Dobrze jest umieszczać odwołania do plików JS na końcu tej sekcji, zaraz przed jej zamknięciem. Zatem przed znacznikiem <code>&lt;/body&gt;</code> będziemy importować do naszej strony bibliotekę JQuery, Tether oraz samego Bootstrapa. Ważna jest wymieniona przeze mnie kolejność, gdyż Bootstrap wymaga do prawidłowego działania dwóch pozostałych bibliotek. Tutaj również skorzystamy z CDN.</p>
+					<p>Gdy mamy zaimporowane do naszego dokumentu wszystkie wymagane pliki to możemy rozpocząć tworzenie strony opartej o Bootstrap 4.</p>
+				</section>
+				<!-- Containers -->
+				<section id="Kontener" class="main-section">
+					<h4>Kontener</h4>
+					<p>Kontener jest podstawowym elementem siatki Bootstrapa i jest on wymagany gdy chcemy zbudować sobie responsywny layout bo bez niego siatka zwyczajnie nie będzie się prawidłowo skalować. Używamy go do rozdzielania a właściwie tworzenia sekcji naszej strony, przykładowo jednym kontenerem jest nasz header, jednym jest treść wpisu, kolejnym sekcja z komentarzami i na koniec jeszcze jeden na stopkę. Oczywiście możemy zamknąć całą stronę w jednym kontenerze ale lepiej jest stworzyć ich kilka, każdemu nadać identyfikator czy klasę i w ten sposób ładnie uporządkować nasz dokument. Kontenery można również zagnieżdżać, ale lepiej zaplanować swój layout tak by tego nie robić. Starajcie się budować stronę tak by jej struktura była jak najmniej skomplikowana, ułatwi to nam, czy innym osobom, które będą nad nią pracować późniejsze modyfikacje.</p>
+					<p>Do dyspozycji mamy dwa rodzaje kontenerów. Pierwszy z nich ma maksymalną szerokość 1140px i z niego będziecie najczęściej korzystać bo przykładowo teksty lepiej wyglądają i łatwiej się je czyta gdy nie są rozciągnięte na całą szerokość ekranu. Aby stworzyć taki kontener korzystamy z poniższego kodu:<br>
+						<code>
+								&lt;div class="container"&gt;
+								&lt;!-- Zawartość kontenera --&gt;
+								&lt;/div&gt;
+								</code>
+					</p>
+					<p>Drugi z nich rozciągnie się nam na całą szerokość ekranu czyli jego szerokość wynosi 100%. Wiele nowoczesnych stron korzysta z takiego rozwiązania, więc pewnie i Wy z niego skorzystacie chociażby do zrobienia headera czy slidera na całą szerokość ekranu.
+						<p>Kod potrzebny do stworzenia takiego kontenera wygląda następująco:<br>
+							<code>
+								&lt;div class="container-fluid"&gt;
+								&lt;!-- Zawartość kontenera --&gt;
+								&lt;/div&gt;
+							</code>
+						</p>
+				</section>
+				<!-- Grid introduction -->
+				<section id="Siatka_wprowadzenie" class="main-section">
+					<h4>Siatka-wprowadzenie</h4>
+					<p>Siatka Bootstrapa składa się z kontenerów (<code>.container</code>), rzędów (<code>.row</code>), które służą do grupowania kolumn i kolumn (<code>.col-*-*</code>), które umieszczamy wewnątrz rzędów. Jest to najpopularniejszy element całego frameworka, dzięki gridowi możemy łatwo budować cały responywny szkielet strony.</p>
+					<p>Kontener jest głównym elementem wewnątrz którego będziemy budowali naszą siatkę, służy nam do wyodrębnienia jakiejś części naszej witryny, przykładowo treści wpisu.</p>
+					<p>Treść wpisu powinna mieć jakiś tytuł, tworzymy sobie zatem rząd <code>.row</code>. Skoro mamy już tytuł to przydała by się treść, ją umieszczamy w kolejnym rzędzie. Pod treścią chcemy wstawić obok siebie trzy zdjęcia, dla nich przygotujemy kolejny rząd. Wewnątrz rzędów wstawiamy kolumny <code>.col-*-*</code>. Nasz kod po tym etapie będzie wyglądał następująco:</p>
+					<div class="container code">
+						<code>
+									&lt;div class="container"&gt;<br>
+									&lt;div class="row"&gt;<br>
+									&lt;div class="col-sm-12"&gt;<br>
+									&lt;!-- Tytuł --&gt;<br>
+									&lt;/div&gt;<br>
+									&lt;/div&gt;<br>
+									&lt;div class="row"&gt;<br>
+									&lt;div class="col-sm-12"&gt;<br>
+									&lt;!-- Treść --&gt;<br>
+									&lt;/div&gt;<br>
+									&lt;/div&gt;<br>
+									&lt;div class="row"&gt;<br>
+									&lt;div class="col-sm-4"&gt;<br>
+									&lt;!-- Zdjęcie --&gt;<br>
+									&lt;/div&gt;<br>
+									&lt;div class="col-sm-4"&gt;<br>
+									&lt;!-- Zdjęcie --&gt;<br>
+									&lt;/div&gt;<br>
+									&lt;div class="col-sm-4"&gt;<br>
+									&lt;!-- Zdjęcie --&gt;<br>
+									&lt;/div&gt;<br>
+									&lt;/div&gt;<br>
+									&lt;/div&gt;
+								</code>
+					</div>
+					<div class="nav-item">
+						<a id="example" class="nav-link">Przykład</a>
+					</div>
+					<div class="contents-rectangle">
+						<div class="row">
+							<div class="col-sm-12">
+								Tytuł wpisu
+							</div>
+						</div>
+						<div class="row">
+							<div id="example-description" class="col-sm-12">
+								Skoro mamy już tytuł to przydała by się treść, ją umieszczamy w kolejnym rzędzie. Pod treścią chcemy wstawić obok siebie trzy zdjęcia, dla nich przygotujemy kolejny rząd.
+							</div>
+						</div>
+						<div class="row rectangle">
+							<div class="col-4">
+								<img src="assets/pobrane.svg" class="img-responsive rectangle" alt="286x180">
+							</div>
+							<div class="col-4">
+								<img src="assets/pobrane.svg" class="img-responsive rectangle" alt="286x180">
+							</div>
+							<div class="col-4">
+								<img src="assets/pobrane.svg" class="img-responsive rectangle" alt="286x180">
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Grid -->
+				<section id="Siatka" class="main-section">
+					<h4>Siatka</h4>
+					<p>Responsywna siatka Bootstrapa służy do budowania szkieletu strony i jest moim zdaniem jego najważniejszym elementem. Dzięki gridowi możemy zbudować sobie cały układ strony i zdefiniować jak ma się zachowywać na poszczególnych rozdzielczościach. W Bootstrap 4 dodatkowo mamy do dyspozycji Flexbox co otwiera przed nami nowe możliwości odnośnie chociażby łatwego wyśrodkowania w pionie.</p>
+					<p>Aby wszystko działało jak należy, musimy najpierw stworzyć sobie kontener czyli diva z klasą <code>.container</code>, który spina nam w całość wybrany element layoutu. W jego wnętrzu tworzymy sobie kolejne rzędy czyli divy z klasą <code>.row</code>. W każdym rzędzie możemy umieścić do 12 kolumn czyli divów z klasą <code>.col-*-*</code> lub <code>.col-*</code> lub <code>.col</code>, w których umieszczamy elementy treści naszej strony.</p>
+					<p>Prócz tego, że mamy do dyspozycji 12 kolumn, mamy również możliwość wyświetlania ich w różny sposób w zależności od rozdzielczości ekranu. Przykładowo stworzenie dwóch kolumn o szerokości 6 za pomocą klasy <code>.col-md-6</code> wyświetli je obok siebie powyżej szerokości ekranu 768px natomiast na niższej będą się one układać pod sobą. Natomiast stworzenie dwóch kolumn za pomocą klasy <code>.col-6</code> wyświetli nam dwie kolumny, obok siebie zarówno, na smartfonie jak i monitorze z rozdzielczością Full HD.</p>
+					<p>Jest to bardzo przydatne bo przykładowo trzy zdjęcia obok siebie na laptopie były by już bardzo małe na tablecie czy smartfonie, więc lepiej żeby wtedy układały się pod sobą na całej szerokości ekranu. Tak samo z tekstami, dwie kolumny tekstu na komputerze podczas wyświetlenia na smartfonie były by bardzo wąskie i długie a zatem trudne do przeczytania. Odpowiedni dobór rodzajów kolumn pozwala nam na budowanie czytelnego layoutu w zależności od rozdzielczości urządzenia na którym będziemy przeglądać stronę.</p>
+					<table class="table table-bordered table-responsive-md">
+						<thead>
+							<tr>
+								<th scope="col">Nazwa klasy</th>
+								<th scope="col"><code>.col-</code></th>
+								<th scope="col"><code>.col-sm-</code></th>
+								<th scope="col"><code>.col-md-</code></th>
+								<th scope="col"><code>.col-lg-</code></th>
+								<th scope="col"><code>.col-xl-</code></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">Szerokość kontenera</th>
+								<td>none (auto)</td>
+								<td>540px</td>
+								<td>720px</td>
+								<td>960px</td>
+								<td>1140px</td>
+							</tr>
+							<tr>
+								<th scope="row">Rozdzialczość ekranu</th>
+								<td>&lt;576</td>
+								<td>&ge;576px</td>
+								<td>&ge;768px</td>
+								<td>&ge;992px</td>
+								<td>&ge;1200px</td>
+							</tr>
+						</tbody>
+					</table>
+					<ul>
+						<li>Klasa <code>.col-*</code> spowoduje wyświetlanie się kolumn zawsze obok siebie, niezależnie od rozdzielczości</li>
+						<li>Klasa <code>.col-sm-*</code> spowoduje wyświetlanie się kolumn obok siebie w rozdzielczości wyższej lub równej 576px, poniżej będą się wyświetlały pod sobą.</li>
+						<li>Klasa <code>.col-md-*</code> spowoduje wyświetlanie się kolumn obok siebie w rozdzielczości wyższej lub równej 768px, poniżej będą się wyświetlały pod sobą.</li>
+						<li>Klasa <code>.col-lg-*</code> spowoduje wyświetlanie się kolumn obok siebie w rozdzielczości wyższej lub równej 992px, poniżej będą się wyświetlały pod sobą.</li>
+						<li>Klasa <code>.col-xl-*</code> spowoduje wyświetlanie się kolumn obok siebie w rozdzielczości wyższej lub równej 1200px, poniżej będą się wyświetlały pod sobą.</li>
+					</ul>
+				</section>
+				<!-- Equal-width -->
+				<section id="Równa_szerokość_kolumn" class="main-section">
+					<h4>Równa szerokość kolumn</h4>
+					<p>Tak jak pisałem wcześniej, Bootstrap 4 opiera się o Flexbox. Jedną z jego funkcjonalności jest możliwość automatycznego tworzenia kolumn o równych szerokościach. Dlatego też w powyższym przypadku nie wykorzystujemy dwóch kolumn po „6” czy trzech kolumn po „4” a po prostu umieszczamy wewnątrz kontenera i rzędu odpowiednią ilość divów z klasą <code>.col</code> i Bootstrap sam utworzy odpowiedniej szerokości kolumny. Pamiętajcie, że bez dopisania kolejnych klas (o których za chwilę) kolumny te nie będą się układały pod sobą na mniejszych rozdzielczościach.</p>
+				</section>
+				<!-- Setting one column width -->
+				<section id="Definiowanie_szerokości_jednej_kolumny" class="main-section">
+					<h4>Definiowanie szerokości jednej kolumny</h4>
+					<p>Kolejnym dobrodziejstwem Flexboxa jest możliwość „opływania” jednej kolumny przez pozostałe. Możemy dzięki temu na przykład zbudować layout w układzie „1/4 1/2 1/4” czyli na przykład mieć na stronie dwa równe sidebary a część główna zawsze będzie szerokości połowy ekranu. Postępujemy tu podobnie jak w poprzednim przykładzie czyli: Najpierw standardowo kontener <code>.container</code>, następnie rząd <code>.row</code> a na koniec div z klasą <code>.col-*</code> gdzie * odpowiada „rozmiarowi” kolumny w skali 1-12 czyli jak w przypadku standardowych Bootstrapowych kolumn.</p>
+				</section>
+				<!-- Variable width content -->
+				<section id="Szerokość_kolumny_zależna_od_treści" class="main-section">
+					<h4>Szerokość kolumny zależna od treści</h4>
+					<p>W powyższym przykładzie ma zastosowanie dopasowanie szerokości do treści w niej zawartej. Im dłuższy tekst, tym kolumna będzie szersza, jednocześnie zmniejszając pozostałe. Aby uzyskać taki efekt musimy stworzyć kolumnę z klasą <code>.col-*-auto</code> gdzie pod <code>*</code> możemy podstawić znane nam breakpointy <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>. W zależności od tego jaki breakpoint zastosujemy, nasza kolumna będzie miała, poniżej niego, 100% szerokości, identycznie jak przy zwykłych kolumnach.</p>
+					<p>Pewnie zauważyliście w przykładzie klasę <code>.justify-content-md-center</code> – służy ona do wycentrowania kolumn w poziomie gdy nie wypełniają one całego rzędu. Oczywiście <code>md</code> w owej klasie jest nazwą breakpointu i możemy tam użyć innego.</p>
+					<p>Drugim, nie pojawiającym się wcześniej zapisem jest połączenie klas <code>.col</code> i <code>.col-lg-2</code>. Wspomniałem o tym wcześniej, ale jak się pewnie domyślacie, owa kolumna dla rozdzielczości większej lub równej 992px będzie miała szerokość „2” a poniżej będzie kolumną elastyczną, wypełniającą całą dostępną dla niej przestrzeń. Tutaj znów mamy zapis breakpointa <code>lg</code>, który możemy zmienić na dowolnie nam pasujący.</p>
+				</section>
+				<!-- Equal-width multi-row -->
+				<section id="Wiele_równych_rzędów" class="main-section">
+					<h4>Wiele równych rzędów</h4>
+					<p>Gdy będziemy potrzebowali kilku równych rzędów kolumn, znajdujących się pod sobą i nie oddzielonych marginesami czy wypełnieniem (miało by to miejsce gdybyśmy każdy rząd umieszczali w nowym divie z klasą <code>.row</code>) wystarczy, że w miejscu w którym chcemy przenieść kolejne kolumny niżej wstawimy pusty div z klasą <code>.w-100</code>.</p>
+				</section>
+				<!-- Responsive classes -->
+				<section id="Responsywność" class="main-section">
+					<h4>Responsywność</h4>
+					<p>W powyższym przykładzie mamy 12 kolumn o szerokości 1, dwie kolumny o szerokościach 8 i 4, trzy kolumny o szerokości 4 oraz dwie kolumny o szerokości 6. Jak widzicie, zawsze suma wynosi 12. Z racji tego, że kolumny mają klasę <code>.col-md-*</code> to poukładają się pod sobą poniżej 720px szerokości ekranu. Jeśli oglądacie tę stronę na tablecie czy smartfonie to kolumny na pewno są pod sobą a nie obok.</p>
+					<p>W powyższym przykładzie mieszamy ze sobą dwie klasy <code>.col-*</code> oraz <code>.col-md-*</code>. Dzięki takiemu zabiegowi zmieniamy sposób wyświetlania kolumn w zależności od rozdzielczości. W pierwszy przykładzie na komputerze mamy jedną kolumnę o szerokości 8 oraz drugą o szerokości 4. Natomiast na smartfonie wyświetli się nam jedna o szerokości 12 a druga o szerokości 6. Drugi przykład na komputerze pokazuje trzy kolumny o szerokości 4 natomiast na smartfonie mamy dwie kolumny o szerokości 6 obok siebie a pod nimi jeszcze jedną o tej samej szerokości. Trzeci przykład pokazuje zawsze dwie kolumny o szerokości 6 obok siebie niezależnie od rozdzielczości.</p>
+					<p>Kolejny z przykładów łączy kolumny dla smartfonów <code>.col-*</code>, kolumny dla tabletów <code>.col-sm-*</code> i kolumny dla komputerów <code>.col-md-*</code>. Pozmieniajcie sobie szerokość przeglądarki lub otwórzcie tę stronę na różnych urządzeniach abyście sami zobaczyli jak się zachowuje powyższy kod i zrozumieli jego działanie.</p>
+					<p>No i tutaj po raz ostatni wracamy do kolumn o równych szerokościach. Pamiętamy, że kolumny z klasą <code>.col</code> zawsze, niezależnie od rozdzielczości, utworzą daną ilość kolumn (jeśli w rzędzie umieścimy 3 divy z klasą <code>.col</code> to otrzymamy 3 równe kolumny). Zachowanie takie nie zawsze jest nam przydatne, bo po co nam 3 bardzo wąskie kolumny tekstu na smartfonie? Dlatego możemy dopisać do klasy <code>.col</code> interesujący nas breakpoint. W tej sposób kolumny z klasą <code>.col-sm</code> będą miały równą szerokość dla rozdzielczości mniejszej niż 576px a poniżej ułożą się pod sobą. Analogicznie kolumny z klasą <code>.col-xl</code> poukładają się jedna pod drugą dla rozdzielczości poniżej 992px. Prawda, że teraz używanie tych kolumn ma sens?</p>
+				</section>
+				<!-- Vertical row alignment -->
+				<section id="Wyrównanie_rzędu_w_pionie" class="main-section">
+					<h4>Wyrównanie rzędu w pionie</h4>
+					<p>Kolejne dobrodziejstwo Flexboxa czyli wyrównywanie w pionie. Wcześniej oczywiście też było to możliwe ale czasami trzeba było się nakombinować aby wszystko działało jak należy dla różnych rozdzielczości. Teraz Bootstrap umożliwia to jedną klasą. A wygląda to następująco:</p>
+					<ul>
+						<li>Aby wyrównać rząd do „góry” rzędu stosujemy dla niego klasę .align-items-start</li>
+						<li>Aby wyrównać rząd do „środka” rzędu stosujemy dla niego klasę .align-items-center</li>
+						<li>Aby wyrównać rząd do „dołu” rzędu stosujemy dla niego klasę .align-items-end</li>
+					</ul>
+				</section>
+				<!-- Vertical col alignment -->
+				<section id="Wyrównanie_kolumny_w_pionie" class="main-section">
+					<h4>Wyrównanie kolumny w pionie</h4>
+					<p>Ten przykład jest podobny do powyższego, również traktuje o wyrównywaniu w pionie. Ale w nim nie układamy całego rzędu a jedynie pojedyncze kolumny, które się w nim znajdują. Dlatego tym razem dodajemy klasę do kolumny a nie do rzędu. I wygląda to następująco:</p>
+					<ul>
+						<li>Aby wyrównać kolumnę do „góry” rzędu stosujemy dla niej klasę <code>.align-self-start</code></li>
+						<li>Aby wyrównać kolumnę do „środka” rzędu stosujemy dla niej klasę <code>.align-self-center</code></li>
+						<li>Aby wyrównać kolumnę do „dołu” rzędu stosujemy dla niej klasę <code>.align-self-end</code></li>
+					</ul>
+				</section>
+				<!-- Horizontal alignment -->
+				<section id="Wyrównanie_w_poziomie" class="main-section">
+					<h4>Wyrównanie w poziomie</h4>
+					<p>Podczas gdy z wyrównywaniem tekstu nie ma żadnego problemu, tak z elementami blokowymi nie zawsze jest tak łatwo. Oczywiście na to również istnieją rozwiązania. Ale po to możemy korzystać z Flexboxa, aby nie musieć kombinować.</p>
+					<p>Tak więc Bootstrap 4 posiada klasy które umożliwiają łatwe układanie zawartości rzędu, czyli kolumn. A wygląda to następująco:</p>
+					<ul>
+						<li>Aby wyrównać zawartość rzędu do lewej strony kontenera stosujemy klasę <code>.justify-content-start</code></li>
+						<li>Aby wyrównać zawartość rzędu do środka strony kontenera stosujemy klasę <code>.justify-content-center</code></li>
+						<li>Aby wyrównać zawartość rzędu do prawej strony kontenera stosujemy klasę <code>.justify-content-end</code></li>
+						<li>Aby wyrównać zawartość rzędu tak by każda kolumna miała po lewej i prawej równe odstępy stosujemy klasę <code>.justify-content-around</code></li>
+						<li>Aby wyrównać zawartość rzędu tak by rozłożyć kolumny w równych odstępach od siebie stosujemy klasę <code>.justify-content-between</code>.</li>
+					</ul>
+				</section>
+				<!-- Vertical and horizontal alignment -->
+				<section id="Wyrównanie_w_pionie_i_w_poziomie" class="main-section">
+					<h4>Wyrównanie w pionie i w poziomie</h4>
+					<p>No to skoro możemy już wyrównywać w pionie i w poziomie to dlaczego by nie zastosować tych dwóch funkcjonalności jednocześnie. W takim przypadku dla rzędu nadajemy klasę <code>.justify-content-around</code> a dla kolumny <code>.align-self-center</code> i gotowe.</p>
+				</section>
+				<hr>
+				<footer>
+					<p>
+						Wykorzystane w celach poglądowych materiały pochodzą ze strony<br>Kurs / Tutorial Bootstrap 4 - Framework HTML/CSS/JS do tworzenia responsywnych stron internetowych<br>
+						<a href="https://bs4.kursbootstrap.pl/" title="Źródło" target="_blank">https://bs4.kursbootstrap.pl/</a>
+					</p>
+				</footer>
+			</main>
+		</div>
+	</div>
+</body>
+
+</html>

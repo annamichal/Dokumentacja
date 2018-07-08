@@ -1,0 +1,116 @@
+body {
+	overflow-y: hidden;
+	color: #404040;
+}
+
+h1 {
+	text-align: center;
+	font-size: 26px;
+	padding: 10px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+.navs {
+	height: 20vh;
+	overflow: auto;
+}
+
+.nav-link {
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	border-color: black;
+	color: #595959;
+}
+
+#nav-bar {
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: #595959;
+	padding: 0 0 10px 0;
+}
+
+#main-doc {
+	height: 70vh;
+	overflow: auto;
+}
+
+.main-section {
+	padding: 10px;
+}
+
+.code {
+	width: 80vw;
+	height: 25vh;
+	overflow: auto;
+	margin-bottom: 20px;
+	border: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	padding: 10px;
+}
+
+#example {
+	background-color: limegreen;
+	width: 90px;
+	height: 50px;
+	padding: 10px 0 0 0;
+	text-align: center;
+	border-top: none;
+}
+
+#example-description {
+	font-size: 12px;
+}
+
+img {
+	width: 100%;
+}
+
+.rectangle {
+	text-align: center;
+	padding-top: 5px;
+}
+
+.contents-rectangle {
+	border: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	padding: 10px;
+}
+
+@media (min-width: 576px) {
+	h1 {
+		text-align: left;
+	}
+	.navs {
+		height: 90vh;
+		overflow: auto;
+	}
+	#nav-bar {
+		border-width: 0 2px 0 0;
+		border-style: solid;
+		border-color: black;
+		padding: 10px 0 10px 10px;
+		font-size: 16px;
+	}
+	.nav-link {
+		padding: 20px 0 10px 10px;
+	}
+	#main-doc {
+		height: 100vh;
+		overflow: auto;
+	}
+	.code {
+		width: 55vw;
+		height: 25vh;
+		overflow: auto;
+	}
+}
+
+footer {
+	font-size: 10px;
+	text-align: center;
+}
