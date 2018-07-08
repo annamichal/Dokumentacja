@@ -85,7 +85,7 @@ img {
 	h1 {
 		text-align: left;
 	}
-	p, li {
+	p, li, .code {
 		font-size: 22px;
 	}
 	.navs {
