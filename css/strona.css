@@ -81,6 +81,11 @@ img {
 	padding: 10px;
 }
 
+footer p {
+	font-size: 10px;
+	text-align: center;
+}
+
 @media (min-width: 576px) {
 	h1 {
 		text-align: left;
@@ -111,9 +116,7 @@ img {
 		height: 25vh;
 		overflow: auto;
 	}
-}
-
-footer {
-	font-size: 10px;
-	text-align: center;
+	#example-description {
+		font-size: 18px;
+	}
 }
